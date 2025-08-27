@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, Search, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import assets from "@/public/assetsManager";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +25,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3">
             <Image
               src={assets.common.Logo}
               alt="JobPilot Logo"
@@ -32,29 +34,29 @@ const Navbar = () => {
             <span className="text-xl font-semibold tracking-tight text-slate-800">
               Upwork JobPilot
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#features"
+            <Link
+              href="/#features"
               className="text-slate-600 hover:text-green-600 transition-colors"
             >
               Features
-            </a>
+            </Link>
 
-            <a
-              href="#install"
+            <Link
+              href="/#why"
               className="text-slate-600 hover:text-green-600 transition-colors"
             >
-              Install
-            </a>
-            <a
-              href="#contact"
+              Why Install
+            </Link>
+            <Link
+              href="/#contact"
               className="text-slate-600 hover:text-green-600 transition-colors"
             >
               Contact
-            </a>
+            </Link>
             <Button className="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-[.5rem] px-6">
               Install Now
             </Button>
@@ -66,6 +68,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="rounded-[.5rem] "
             >
               {mobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -77,33 +80,52 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-slate-200 py-4">
-            <div className="flex flex-col space-y-4 px-4">
-              <a
-                href="#features"
-                className="text-slate-600 hover:text-green-600 transition-colors"
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-slate-200 py-4 shadow-lg"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
+              <motion.div
+                className="flex flex-col space-y-4 px-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.2 }}
               >
-                Features
-              </a>
-              <a
-                href="#install"
-                className="text-slate-600 hover:text-green-600 transition-colors"
-              >
-                Install
-              </a>
-              <a
-                href="#contact"
-                className="text-slate-600 hover:text-green-600 transition-colors"
-              >
-                Contact
-              </a>
-              <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">
-                Install Now
-              </Button>
-            </div>
-          </div>
-        )}
+                <Link
+                  href="/#features"
+                  className="text-slate-600 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Features
+                </Link>
+                <Link
+                  href="/#install"
+                  className="text-slate-600 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Install
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="text-slate-600 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">
+                  Install Now
+                </Button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

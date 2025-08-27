@@ -14,7 +14,7 @@ const fadeInUp = {
 
 const Why = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="why" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div {...fadeInUp}>

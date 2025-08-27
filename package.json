@@ -1,7 +1,11 @@
 {
-  "name": "nextjs",
+  "name": "Upwork JobPilot",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Abhay Misra",
+    "email": "abhaym1205@gmail.com",
+    "url": "https://abhaymishra.in"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

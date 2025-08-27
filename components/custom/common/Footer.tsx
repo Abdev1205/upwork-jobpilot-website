@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import assets from "@/public/assetsManager";
+import Link from "next/link";
 
 import {
   Search,
@@ -10,7 +11,6 @@ import {
   FileText,
   HelpCircle,
   ChromeIcon,
-  Link,
   ExternalLink,
   ExternalLinkIcon,
 } from "lucide-react";
@@ -57,51 +57,52 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <a
+              <Link
                 href="#features"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
                 Features
-              </a>
-              <a
-                href="#screenshots"
+              </Link>
+              <Link
+                href="#why"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
-                Screenshots
-              </a>
-              <a
-                href="#video"
+                Why Install
+              </Link>
+              <Link
+                href="https://www.youtube.com/watch?v=jjSF1CJIG9k"
+                target="_blank"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
                 Demo Video
-              </a>
+              </Link>
             </div>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Support</h3>
             <div className="space-y-2">
-              <a
-                href="#"
+              <Link
+                href="/privacy-policy"
                 className="flex items-center text-slate-400 hover:text-white transition-colors"
               >
                 <FileText className="w-4 h-4 mr-2" />
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/privacy-policy"
                 className="flex items-center text-slate-400 hover:text-white transition-colors"
               >
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Support
-              </a>
-              <a
+              </Link>
+              <Link
                 href="mailto:abhaym1205@gmail.com"
                 className="flex items-center text-slate-400 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Contact Email
-              </a>
+              </Link>
             </div>
           </div>
 
