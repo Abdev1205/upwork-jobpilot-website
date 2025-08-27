@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     apple: "/assets/common/logo.png",
   },
   verification: {
-    google: "Y64fyfj7_mroESnV4RWbO2gvGRkQNr1ffx0Y6IY0SI8",
+    google: "0U3Gt4Ivo_EED11zL8wjf-4O6oMSmQo1jdsv7_IVflM",
   },
   category: "productivity",
   classification: "Business",
@@ -80,7 +80,7 @@ export default function RootLayout({
       <head>
         <meta
           name="google-site-verification"
-          content="Y64fyfj7_mroESnV4RWbO2gvGRkQNr1ffx0Y6IY0SI8"
+          content="0U3Gt4Ivo_EED11zL8wjf-4O6oMSmQo1jdsv7_IVflM"
         />
         <link rel="canonical" href="https://upwork-jobpilot.vercel.app" />
         <meta name="theme-color" content="#16a34a" />
