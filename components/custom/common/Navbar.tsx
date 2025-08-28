@@ -57,9 +57,16 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Button className="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-[.5rem] px-6">
-              Install Now
-            </Button>
+            <Link
+              href={
+                "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+              }
+              target="_blank"
+            >
+              <Button className="bg-gradient-to-r from-green-700 to-green-600 text-white rounded-[.5rem] px-6">
+                Install Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -106,11 +113,11 @@ const Navbar = () => {
                   Features
                 </Link>
                 <Link
-                  href="/#install"
+                  href="/#why"
                   className="text-slate-600 hover:text-green-600 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Install
+                  Why Install
                 </Link>
                 <Link
                   href="/#contact"
@@ -119,9 +126,17 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
-                <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">
-                  Install Now
-                </Button>
+
+                <Link
+                  href={
+                    "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+                  }
+                  target="_blank"
+                >
+                  <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">
+                    Install Now
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
           )}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Play } from "lucide-react";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -33,21 +34,35 @@ const Hero = () => {
                 inside Upwork. The ultimate tool for serious freelancers.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-green-700 to-green-600  text-white rounded-[.5rem] px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                <Link
+                  href={
+                    "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+                  }
+                  target="_blank"
                 >
-                  <Download className="w-6 h-6 mr-3" />
-                  Install Extension
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-[.5rem]  px-10 py-6 text-lg font-semibold"
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-green-700 to-green-600  text-white rounded-[.5rem] px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                  >
+                    <Download className="w-6 h-6 mr-3" />
+                    Install Extension
+                  </Button>
+                </Link>
+
+                <Link
+                  href="https://www.youtube.com/watch?v=jjSF1CJIG9k"
+                  target="_blank"
+                  className="block text-slate-400 hover:text-white transition-colors"
                 >
-                  <Play className="w-6 h-6 mr-3" />
-                  Watch Demo
-                </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-[.5rem]  px-10 py-6 text-lg font-semibold"
+                  >
+                    <Play className="w-6 h-6 mr-3" />
+                    Watch Demo
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>

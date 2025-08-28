@@ -108,10 +108,17 @@ const Footer = () => {
 
           <div>
             <h3 className="font-semibold mb-4">Install</h3>
-            <Button className="bg-gradient-to-r from-green-700 to-green-600 rounded-[.5rem] mb-4 w-fit">
-              <Download className="w-4 h-4 mr-2" />
-              Chrome Web Store
-            </Button>
+            <Link
+              href={
+                "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+              }
+              target="_blank"
+            >
+              <Button className="bg-gradient-to-r from-green-700 to-green-600 rounded-[.5rem] mb-4 w-fit">
+                <Download className="w-4 h-4 mr-2" />
+                Chrome Web Store
+              </Button>
+            </Link>
           </div>
         </div>
 

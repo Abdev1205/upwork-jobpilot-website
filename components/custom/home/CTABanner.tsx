@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CTABanner = () => {
   return (
@@ -34,13 +35,20 @@ const CTABanner = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-white  text-green-600 rounded-[.5rem] px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all hover:bg-white transform hover:scale-[1.01]"
+            <Link
+              href={
+                "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+              }
+              target="_blank"
             >
-              <Download className="w-6 h-6 mr-3" />
-              Install Extension Its Free
-            </Button>
+              <Button
+                size="lg"
+                className="bg-white  text-green-600 rounded-[.5rem] px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all hover:bg-white transform hover:scale-[1.01]"
+              >
+                <Download className="w-6 h-6 mr-3" />
+                Install Extension Its Free
+              </Button>
+            </Link>
 
             <div className="text-primary-foreground/80 text-sm">
               ⭐ 4.8/5 stars on Chrome Web Store

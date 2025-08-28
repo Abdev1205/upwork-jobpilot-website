@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 import { TrendingUp, CheckCircle2, Download } from "lucide-react";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -64,13 +65,20 @@ const Why = () => {
                   Start finding better projects and winning more proposals
                   today.
                 </p>
-                <Button
-                  size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white rounded-[.5rem] px-8 py-4 text-lg shadow-lg"
+                <Link
+                  href={
+                    "https://chromewebstore.google.com/detail/jcailleephcdfbjhbmcjmhelejgmcedn?utm_source=item-share-cb"
+                  }
+                  target="_blank"
                 >
-                  <Download className="w-5 h-5 mr-2" />
-                  Install JobPilot Now
-                </Button>
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white rounded-[.5rem] px-8 py-4 text-lg shadow-lg"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Install JobPilot Now
+                  </Button>
+                </Link>
               </div>
             </Card>
           </motion.div>
